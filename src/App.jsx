@@ -14,11 +14,13 @@ function App() {
       <header>
         <h1>Currículum vitae</h1>
 
-        <img
-          src="/foto-perfil.png"
-          alt="Foto de Gilda Pamela Vega"
-          width="200"
-        />
+      
+<img
+  src={`${import.meta.env.BASE_URL}foto-perfil.png`}
+  alt="Foto de Gilda Pamela Vega"
+  width="200"
+/>
+
 
         <h2>Gilda Pamela Vega</h2>
 
