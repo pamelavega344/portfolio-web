@@ -2,9 +2,9 @@
 import { useState } from "react";
 import "./App.css";
 
-import Inicio from "./Inicio.jsx";
 import Proyectos from "./Proyectos.jsx";
 import Contacto from "./Contacto.jsx";
+import Inicio from "./Inicio.jsx";
 
 function App() {
   const [pagina, setPagina] = useState("inicio");
@@ -14,13 +14,11 @@ function App() {
       <header>
         <h1>Currículum vitae</h1>
 
-      
-<img
-  src={`${import.meta.env.BASE_URL}foto-perfil.png`}
-  alt="Foto de Gilda Pamela Vega"
-  width="200"
-/>
-
+        <img
+          src={`${import.meta.env.BASE_URL}foto-perfil.png`}
+          alt="Foto de Gilda Pamela Vega"
+          width="200"
+        />
 
         <h2>Gilda Pamela Vega</h2>
 
@@ -41,6 +39,9 @@ function App() {
           <button onClick={() => setPagina("contacto")}>
             Contacto
           </button>
+          <button onClick={() => setPagina("api")}>
+  API
+</button>
         </nav>
       </header>
 
@@ -68,14 +69,13 @@ function App() {
                 {conocimiento}
               </p>
             ))}
-
-            
           </div>
         )}
 
         {pagina === "proyectos" && <Proyectos />}
 
         {pagina === "contacto" && <Contacto />}
+        {pagina === "api" && <Inicio />}
       </main>
     </div>
   );
